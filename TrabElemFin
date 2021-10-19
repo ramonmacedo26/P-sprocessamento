@@ -1,0 +1,25 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+
+p = pd.read_csv("/content/drive/MyDrive/Doc.Faculdade/Doc.Faculdade/ElemFin/pressao_div_densidade.csv")
+velo = pd.read_csv("/content/drive/MyDrive/Doc.Faculdade/Doc.Faculdade/ElemFin/velocidade.csv")
+
+fig_v = plt.figure(figsize=(15,8))
+fig_v.suptitle("Velocidade centro")
+
+x=velo["Points:0"]
+v=velo["U:0"]
+
+plt.plot(x, v)
+
+plt.show()
+
+fig_v = plt.figure(figsize=(15,8))
+fig_v.suptitle("Pressão")
+
+x=p["Points:0"]
+v=p["p"]
+
+plt.plot(x, v)
+
+plt.show()
